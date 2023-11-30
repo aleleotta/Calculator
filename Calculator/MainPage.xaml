@@ -11,17 +11,35 @@
             HorizontalOptions="Center">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="4"/>
+
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

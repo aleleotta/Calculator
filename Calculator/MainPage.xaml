@@ -10,7 +10,9 @@
             VerticalOptions="Center"
             HorizontalOptions="Center">
             <Grid>
+                
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -21,24 +23,25 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="1"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="2"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="3"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="1" Grid.Column="4"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="1"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="2"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="3"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="2" Grid.Column="4"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="1"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="2"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="3"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="3" Grid.Column="4"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="1"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="2"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="3"/>
-                <Button BackgroundColor="Blue" Text="7" Grid.Row="4" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="7" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="8" TextColor="Black" Grid.Row="1" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="9" TextColor="Black" Grid.Row="1" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="/" TextColor="Black" Grid.Row="1" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="4" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="5" TextColor="Black" Grid.Row="2" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="6" TextColor="Black" Grid.Row="2" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="X" TextColor="Black" Grid.Row="2" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="1" TextColor="Black" Grid.Row="3" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="2" TextColor="Black" Grid.Row="3" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="3" TextColor="Black" Grid.Row="3" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="-" TextColor="Black" Grid.Row="3" Grid.Column="4"/>
+                <Button BackgroundColor="Blue" Text="." TextColor="Black" Grid.Row="4" Grid.Column="1"/>
+                <Button BackgroundColor="Blue" Text="0" TextColor="Black" Grid.Row="4" Grid.Column="2"/>
+                <Button BackgroundColor="Blue" Text="=" TextColor="Black" Grid.Row="4" Grid.Column="3"/>
+                <Button BackgroundColor="Blue" Text="+" TextColor="Black" Grid.Row="4" Grid.Column="4"/>
 
             </Grid>
         </VerticalStackLayout>

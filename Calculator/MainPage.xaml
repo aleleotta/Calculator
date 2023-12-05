@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.MainPage">
+             x:Class="Calculator.MainPage"
+             BackgroundColor="LightBlue">
 
     <VerticalStackLayout
         Spacing="25"
@@ -17,7 +18,7 @@
                 Padding="10,10,10,10"
                 VerticalOptions="Center"
                 HorizontalOptions="Center">
-                <Grid>
+                <Grid HeightRequest="300" WidthRequest="200">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -37,22 +38,22 @@
                     
                     <Border Stroke="White" StrokeThickness="1" StrokeShape="RoundRectangle 2,2,2,2" Margin="0,0,0,10" Padding="7"
                             Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="2" MinimumHeightRequest="60" VerticalOptions="Center">
-                        <Label x:Name="display" Text="Unknown" FontSize="20"/>
+                        <Label x:Name="display" Text="0" FontSize="20"/>
                     </Border>
-                    <Button x:Name="button7" BackgroundColor="CornflowerBlue" Text="7" TextColor="Black" Clicked="Button_Clicked" Grid.Row="2" Grid.Column="0"/>
-                    <Button x:Name="button8" BackgroundColor="CornflowerBlue" Text="8" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
-                    <Button x:Name="button9" BackgroundColor="CornflowerBlue" Text="9" TextColor="Black" Grid.Row="2" Grid.Column="2"/>
+                    <Button x:Name="button7" BackgroundColor="CornflowerBlue" Text="7" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="2" Grid.Column="0"/>
+                    <Button x:Name="button8" BackgroundColor="CornflowerBlue" Text="8" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="2" Grid.Column="1"/>
+                    <Button x:Name="button9" BackgroundColor="CornflowerBlue" Text="9" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="2" Grid.Column="2"/>
                     <Button x:Name="buttonDiv" BackgroundColor="CornflowerBlue" Text="/" TextColor="Black" Grid.Row="2" Grid.Column="3"/>
-                    <Button x:Name="button4" BackgroundColor="CornflowerBlue" Text="4" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
-                    <Button x:Name="button5" BackgroundColor="CornflowerBlue" Text="5" TextColor="Black" Grid.Row="3" Grid.Column="1"/>
-                    <Button x:Name="button6" BackgroundColor="CornflowerBlue" Text="6" TextColor="Black" Grid.Row="3" Grid.Column="2"/>
+                    <Button x:Name="button4" BackgroundColor="CornflowerBlue" Text="4" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="3" Grid.Column="0"/>
+                    <Button x:Name="button5" BackgroundColor="CornflowerBlue" Text="5" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="3" Grid.Column="1"/>
+                    <Button x:Name="button6" BackgroundColor="CornflowerBlue" Text="6" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="3" Grid.Column="2"/>
                     <Button x:Name="buttonMult" BackgroundColor="CornflowerBlue" Text="X" TextColor="Black" Grid.Row="3" Grid.Column="3"/>
-                    <Button x:Name="button1" BackgroundColor="CornflowerBlue" Text="1" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
-                    <Button x:Name="button2" BackgroundColor="CornflowerBlue" Text="2" TextColor="Black" Grid.Row="4" Grid.Column="1"/>
-                    <Button x:Name="button3" BackgroundColor="CornflowerBlue" Text="3" TextColor="Black" Grid.Row="4" Grid.Column="2"/>
+                    <Button x:Name="button1" BackgroundColor="CornflowerBlue" Text="1" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="4" Grid.Column="0"/>
+                    <Button x:Name="button2" BackgroundColor="CornflowerBlue" Text="2" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="4" Grid.Column="1"/>
+                    <Button x:Name="button3" BackgroundColor="CornflowerBlue" Text="3" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="4" Grid.Column="2"/>
                     <Button x:Name="buttonSub" BackgroundColor="CornflowerBlue" Text="-" TextColor="Black" Grid.Row="4" Grid.Column="3"/>
                     <Button x:Name="buttonDecimal" BackgroundColor="CornflowerBlue" Text="." TextColor="Black" Grid.Row="5" Grid.Column="0"/>
-                    <Button x:Name="button0" BackgroundColor="CornflowerBlue" Text="0" TextColor="Black" Grid.Row="5" Grid.Column="1"/>
+                    <Button x:Name="button0" BackgroundColor="CornflowerBlue" Text="0" TextColor="Black" Clicked="ButtonNum_Clicked" Grid.Row="5" Grid.Column="1"/>
                     <Button x:Name="buttonEqual" BackgroundColor="CornflowerBlue" Text="=" TextColor="Black" Grid.Row="5" Grid.Column="2"/>
                     <Button x:Name="buttonAdd" BackgroundColor="CornflowerBlue" Text="+" TextColor="Black" Grid.Row="5" Grid.Column="3"/>
 

@@ -9,16 +9,20 @@
 
         double result = 0;
         string operation = "0";
+        double currentNumber = 0;
 
         private void ButtonNum_Clicked(object sender, EventArgs e)
         {
             int var = ButtonNumId();
             if (operation == "0")
             {
+                currentNumber = var;
                 operation = var.ToString();
             }
             else
             {
+                string strCurrentNumber = currentNumber.ToString() + var.ToString();
+                double.TryParse(strCurrentNumber, out double result)
                 operation = operation + var.ToString();
             }
             string displayText = display.Text;
@@ -62,6 +66,7 @@
         {
             if (buttonAdd.IsPressed)
             {
+                result = result + currentNumber;
                 operation = operation + buttonAdd.Text;
             }
             else if (buttonSub.IsPressed)
@@ -76,11 +81,11 @@
             {
                 operation = operation + buttonDiv.Text;
             }
-            else if (buttonDecimal.IsPressed)
+            else if (buttonDecimal.IsPressed) //Will be different
             {
                 operation = operation + buttonDecimal.Text;
             }
-            else if (buttonEqual.IsPressed)
+            else if (buttonEqual.IsPressed) //Will be different
             {
                 operation = operation + buttonEqual.Text;
             }

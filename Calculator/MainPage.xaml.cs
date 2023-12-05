@@ -8,24 +8,24 @@
         }
 
         double result = 0;
-        string currentNumber = "0";
+        string operation = "0";
 
         private void ButtonNum_Clicked(object sender, EventArgs e)
         {
-            int var = ButtonId();
-            if (currentNumber == "0")
+            int var = ButtonNumId();
+            if (operation == "0")
             {
-                currentNumber = var.ToString();
+                operation = var.ToString();
             }
             else
             {
-                currentNumber = currentNumber + var.ToString();
+                operation = operation + var.ToString();
             }
             string displayText = display.Text;
-            display.Text = currentNumber;
+            display.Text = operation;
         }
 
-        private int ButtonId()
+        private int ButtonNumId()
         {
             int var = 0;
             if (button1.IsPressed) {
@@ -60,8 +60,39 @@
 
         private void ButtonOps_Clicked(object sender, EventArgs e)
         {
+            int var = ButtonNumId();
             string displayText = display.Text;
-            
+            display.Text = operation;
+        }
+
+        private int ButtonOpsId()
+        {
+            int var = 0;
+            if (buttonAdd.IsPressed)
+            {
+                var = 1;
+            }
+            else if (buttonSub.IsPressed)
+            {
+                var = 2;
+            }
+            else if (buttonMult.IsPressed)
+            {
+                var = 3;
+            }
+            else if (buttonDiv.IsPressed)
+            {
+                var = 4;
+            }
+            else if (buttonDecimal.IsPressed)
+            {
+                var = 5;
+            }
+            else if (buttonEqual.IsPressed)
+            {
+                var = 6;
+            }
+            return var;
         }
 
     }

@@ -60,7 +60,30 @@
 
         private void ButtonOps_Clicked(object sender, EventArgs e)
         {
-            int var = ButtonNumId();
+            if (buttonAdd.IsPressed)
+            {
+                operation = operation + buttonAdd.Text;
+            }
+            else if (buttonSub.IsPressed)
+            {
+                operation = operation + buttonSub.Text;
+            }
+            else if (buttonMult.IsPressed)
+            {
+                operation = operation + buttonMult.Text;
+            }
+            else if (buttonDiv.IsPressed)
+            {
+                operation = operation + buttonDiv.Text;
+            }
+            else if (buttonDecimal.IsPressed)
+            {
+                operation = operation + buttonDecimal.Text;
+            }
+            else if (buttonEqual.IsPressed)
+            {
+                operation = operation + buttonEqual.Text;
+            }
             string displayText = display.Text;
             display.Text = operation;
         }

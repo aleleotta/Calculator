@@ -22,7 +22,7 @@
             else
             {
                 string strCurrentNumber = currentNumber.ToString() + var.ToString();
-                double.TryParse(strCurrentNumber, out double result)
+                double.TryParse(strCurrentNumber, out double result);
                 operation = operation + var.ToString();
             }
             string displayText = display.Text;
@@ -64,21 +64,24 @@
 
         private void ButtonOps_Clicked(object sender, EventArgs e)
         {
-            if (buttonAdd.IsPressed)
+            if (buttonAdd.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('+')))
             {
                 result = result + currentNumber;
                 operation = operation + buttonAdd.Text;
             }
-            else if (buttonSub.IsPressed)
+            else if (buttonSub.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('-')))
             {
+                result = result - currentNumber;
                 operation = operation + buttonSub.Text;
             }
-            else if (buttonMult.IsPressed)
+            else if (buttonMult.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('X')))
             {
+                result = result * currentNumber;
                 operation = operation + buttonMult.Text;
             }
-            else if (buttonDiv.IsPressed)
+            else if (buttonDiv.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('+')))
             {
+                result = result / currentNumber;
                 operation = operation + buttonDiv.Text;
             }
             else if (buttonDecimal.IsPressed) //Will be different
@@ -87,7 +90,7 @@
             }
             else if (buttonEqual.IsPressed) //Will be different
             {
-                operation = operation + buttonEqual.Text;
+                operation = result.ToString();
             }
             string displayText = display.Text;
             display.Text = operation;

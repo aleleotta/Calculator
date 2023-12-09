@@ -22,7 +22,7 @@
             else
             {
                 string strCurrentNumber = currentNumber.ToString() + var.ToString();
-                double.TryParse(strCurrentNumber, out double result);
+                double.TryParse(strCurrentNumber, out currentNumber);
                 operation = operation + var.ToString();
             }
             string displayText = display.Text;
@@ -64,31 +64,36 @@
 
         private void ButtonOps_Clicked(object sender, EventArgs e)
         {
-            if (buttonAdd.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('+')))
+            int var = ButtonOpsId();
+            if (var == 1 && !(display.Text.Equals("0") || display.Text[^1] == ('+'))) //Addition
             {
                 result = result + currentNumber;
                 operation = operation + buttonAdd.Text;
+                currentNumber = 0;
             }
-            else if (buttonSub.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('-')))
+            else if (var == 2 && !(display.Text.Equals("0") || display.Text[^1] == ('-'))) //Subtraction
             {
                 result = result - currentNumber;
                 operation = operation + buttonSub.Text;
+                currentNumber = 0;
             }
-            else if (buttonMult.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('X')))
+            else if (var == 3 && !(display.Text.Equals("0") || display.Text[^1] == ('X'))) //Multiplication
             {
                 result = result * currentNumber;
                 operation = operation + buttonMult.Text;
+                currentNumber = 0;
             }
-            else if (buttonDiv.IsPressed && !(display.Text.Equals("0") || display.Text[^1] == ('+')))
+            else if (var == 4 && !(display.Text.Equals("0") || display.Text[^1] == ('/'))) //Division
             {
                 result = result / currentNumber;
                 operation = operation + buttonDiv.Text;
+                currentNumber = 0;
             }
-            else if (buttonDecimal.IsPressed) //Will be different
+            else if (var == 5) //Decimal *Will be different
             {
                 operation = operation + buttonDecimal.Text;
             }
-            else if (buttonEqual.IsPressed) //Will be different
+            else if (var == 6) //Equal *Will be different
             {
                 operation = result.ToString();
             }

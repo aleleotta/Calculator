@@ -14,10 +14,16 @@
         private void ButtonNum_Clicked(object sender, EventArgs e)
         {
             int var = ButtonNumId();
-            if (operation == "0")
+            if (currentNumber == 0)
             {
                 currentNumber = var;
-                operation = var.ToString();
+                if (operation == "0")
+                {
+                    operation = var.ToString();
+                }
+                else {
+                    operation = operation + var.ToString();
+                }
             }
             else
             {
@@ -95,10 +101,40 @@
             }
             else if (var == 6) //Equal *Will be different
             {
+                LocateOperand(); //Calculates final number.
                 operation = result.ToString();
             }
             string displayText = display.Text;
             display.Text = operation;
+        }
+
+        private void LocateOperand() {
+            char operand = 't';
+            string finalNum = "";
+            for (int i = operation.Length-1; operand != '+' && operand != '-' && operand != '*' && operand != '/'; i--) {
+                char pos = operation[i];
+                if (pos == '+') { operand = pos; }
+                else if (pos == '-') { operand = pos; }
+                else if (pos == '*') { operand = pos; }
+                else if (pos == '/') { operand = pos; }
+                else { finalNum = pos + finalNum; }
+            }
+            if (operand == '+') {
+                double.TryParse(finalNum, out double num);
+                result = result + num;
+            }
+            if (operand == '-') {
+                double.TryParse(finalNum, out double num);
+                result = result - num;
+            }
+            if (operand == '*') {
+                double.TryParse(finalNum, out double num);
+                result = result * num;
+            }
+            if (operand == '/') {
+                double.TryParse(finalNum, out double num);
+                result = result / num;
+            }
         }
 
         private int ButtonOpsId()

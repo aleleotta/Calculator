@@ -95,14 +95,14 @@
                 operation = operation + buttonDiv.Text;
                 currentNumber = 0;
             }
-            else if (var == 5) //Reset *Will be different
+            else if (var == 5) //Reset
             {
                 result = 0;
                 operation = "0";
                 currentNumber = 0;
                 display.Text = "0";
             }
-            else if (var == 6) //Equal *Will be different
+            else if (var == 6) //Equal
             {
                 LocateOperand(); //Calculates final number.
                 operation = result.ToString();

@@ -95,9 +95,12 @@
                 operation = operation + buttonDiv.Text;
                 currentNumber = 0;
             }
-            else if (var == 5) //Decimal *Will be different
+            else if (var == 5) //Reset *Will be different
             {
-                operation = operation + buttonDecimal.Text;
+                result = 0;
+                operation = "0";
+                currentNumber = 0;
+                display.Text = "0";
             }
             else if (var == 6) //Equal *Will be different
             {
@@ -156,7 +159,7 @@
             {
                 var = 4;
             }
-            else if (buttonDecimal.IsPressed)
+            else if (buttonAC.IsPressed)
             {
                 var = 5;
             }

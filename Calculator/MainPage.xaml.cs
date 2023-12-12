@@ -112,8 +112,8 @@
         }
 
         private void LocateOperand() {
-            char operand = 't';
-            string finalNum = "";
+            char operand = 't'; //Operand used before number.
+            string finalNum = ""; //Number that follows after operand.
             for (int i = operation.Length-1; operand != '+' && operand != '-' && operand != '*' && operand != '/'; i--) {
                 char pos = operation[i];
                 if (pos == '+') { operand = pos; }
